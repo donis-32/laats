@@ -22,7 +22,7 @@
                     
                     <div class="grupo">
                         <label for="start">Fecha:</label>
-                        <input type="date" id="start" name="trip-start" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"  max="2023-12-31">
+                        <input type="date" id="start" name="fecha_servicio" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"  max="2023-12-31">
                     </div>
                     
                     <div class="grupo">
@@ -123,7 +123,7 @@
                     </div>
                     
                     <div class="grupo">     
-                        <input type="checkbox" id="newsltt" name="chknews">
+                        <input type="checkbox" id="newsltt" name="cliente_acepta">
                         <label for="newsltt" id="tt" style="font-size: 20px;">El cliente acepta enviar este formulario.</label>
                     </div>
                     <button type="submit" name="register">enviar</button>
