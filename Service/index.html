@@ -4,8 +4,9 @@
    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAFFLE NB CX - 72</title>
+    <title>Laats - Laats</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://laats.net/wp-content/uploads/2020/07/favicon.png" type="image/png" sizes="16x16">
 
 </head>
 <body>
@@ -13,26 +14,31 @@
             <form method="POST" id="form">
                 <div class="form">
                     
-                    <img id="imgraffle" src="assets/images/log-png.png">
+                    <img id="imglogo" src="assets/images/log-png.png">
                     
-                    <h1>New Balance XC-72 "Bone Multi" </h1>
-                    
-                    <h3 id="tc">Ingresa tus datos* para participar en el derecho de compra de tus zapatillas</h3>
-                    <h5>*todos  los campos son obligatorios.</h5>
+                    <h1>Orden de Servicio</h1>
                     
                     <div class="grupo">
-                    <input type="text" name="nombre" placeholder="NOMBRES" required><span class="barra"></span>
+                        <label for="start">Fecha:</label>
+                        <input type="date" id="start" name="trip-start" value="<?php echo date('Y-m-d'); ?>" min="2022-01-01" max="2023-12-31">
+                    </div>
+                    
+                    <div class="grupo">
+                        <input type="text" name="nombre" placeholder="NOMBRES" required><span class="barra"></span>
                     </div>
                     
                     <div class="grupo">
                         <input type="text" name="apellido" placeholder="APELLIDOS" required><span class="barra"></span>
                     </div>
+                    
                     <div class="grupo">
                         <input type="text" name="ig" placeholder="IG" required="@"><span class="barra"></span>
                     </div>
+                    
                     <div class="grupo">
                         <input type="email" name="email" placeholder="E-MAIL" required><span class="barra"></span>
                     </div>
+                    
                     <div class="grupo">
                         <input type="number" name="numtel" placeholder="NUMERO DE TELEFONO" required>
                         <span class="barra"></span>

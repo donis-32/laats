@@ -1,8 +1,8 @@
 <?php
 	$servername = "217.21.76.151";
-	$username = "u976993883_admin";
-	$password = "Qup23104";
-	$db = "u976993883_db_raffleseek";
+	$username = "u474179435_admin_laats";
+	$password = "wxJ]E9]X";
+	$db = "u474179435_db_laats";
 // Create connection
 $conex = mysqli_connect($servername, $username, $password,$db);
 
