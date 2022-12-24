@@ -1,5 +1,5 @@
 <?php
-	$servername = "217.21.76.151";
+	$servername = "sql872.main-hosting.eu";
 	$username = "u474179435_admin_laats";
 	$password = "wxJ]E9]X";
 	$db = "u474179435_db_laats";

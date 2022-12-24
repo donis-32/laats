@@ -131,7 +131,7 @@
             </form>
             </div>
     <?php 
-      include("registrar.php");
+      include("assets/registrar.php");
     ?>
 </body>    
  </html>
