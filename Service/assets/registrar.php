@@ -3,66 +3,50 @@
 include("con_db.php");
 
 if (isset($_POST['register'])) {
-    if (strlen($_POST['nombre']) >= 1 && strlen($_POST['email']) >= 1) {
-	    $nombre = trim($_POST['nombre']);
-	    $apellido = trim($_POST['apellido']);
-	    
-	    $email = trim($_POST['email']);
-        $ig = trim($_POST['ig']);
-	    $num =  trim($_POST['numtel']);
-	    $talla =  trim($_POST['tallas']);
-	    $fechareg = date("Y-m-d");
-        $estilo = trim($_POST['estilocalz']);
-        
-	    date_default_timezone_set('America/Guatemala');
-		$hora = date("G:i:s");
-
-	   $consulta = "INSERT INTO mnto_honeyflux(nombre, apellido, email, ig, numtel, tallas,estilo,hora,fecha) VALUES ('$nombre','$apellido' ,'$email', '$ig', '$num','$talla','XC72','$hora','$fechareg')";
-	    $resultado = mysqli_query($conex,$consulta); $resultado = mysqli_query($conex,$consulta);
-        
-	    if ($resultado) {
-	    	?> 
-                <link rel="stylesheet" href="./style.css">
-	    		<div id='mstamvan'>
-				<div id='belakang'></div>
-				<div class='isinya'>
-				    <a href='https://www.theseek.store/' target='_blank'/>
-                <div class="containerttr">
-                    <img id="popupimg" src="assets/images/Aviso-redirecci%C3%B3n.png" />
-                </div>
-				  </div>
-				</div>
-				<!-- partial -->
-			  	<script  src="./script.js"></script>
-
-			  	<script type="text/javascript">
-					function redireccionar(){
-					  window.location="https://www.theseek.store/";
-					} 
-					setTimeout ("redireccionar()", 5000); //tiempo expresado en milisegundos
-				</script>
-           <?php
-            
-	    } else {
-	    	?> 
-                <link rel="stylesheet" href="./style.css">
-	    		<div id='mstamvan'>
-				<div id='belakang'></div>
-				<div class='tulisan' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode)'><a>&#215;</a></div>
-				<div class='isinya'>
-				    <a href='https://www.theseek.store/' target='_blank'/>
-                <div class="containerttr">
-                    <img id="popupimg" src="assets/images/Aviso-Error.png" />
-                </div>
-				  </div>
-				</div>
-           <?php
-	    }
-    }   else {
-	    	?> 
-	    	<h3 class="bad">¡Por favor complete los campos!</h3>
-           <?php
+    $fecha_servicio = trim($_POST['fecha_servicio']);
+    $nombre_cliente = trim($_POST['nombre_cliente']);
+    $direccion_cliente = trim($_POST['direccion_cliente']);
+    $contacto_cliente = trim($_POST['contacto_cliente']);
+    $telefono_cliente = trim($_POST['telefono_cliente']);
+    $email_cliente = trim($_POST['email_cliente']);
+    $nombre_equipo = trim($_POST['nombre_equipo']);
+    $marca_equipo = trim($_POST['marca_equipo']);
+    $modelo_equipo = trim($_POST['modelo_equipo']);
+    $serie_equipo = trim($_POST['serie_equipo']);
+    $observaciones_servicio = trim($_POST['observaciones_servicio']);
+    $status_inicial_equipo = trim($_POST['status_inicial_equipo']);
+    $status_final_equipo = trim($_POST['status_final_equipo']);
+    $tecnico = trim($_POST['tecnico']);
+    $hora_entrada_tecnico = trim($_POST['hora_entrada_tecnico']);
+    $hora_salida_tecnico = trim($_POST['hora_salida_tecnico']);
+    $calificacion = trim($_POST['calificacion']);
+    $observacion_cliente = trim($_POST['observacion_cliente']);
+    
+    if (isset($_POST["cliente_acepta"])) {
+        $cliente_acepta = 'YES';
+    } else {
+        $cliente_acepta = 'NO';
     }
+    
+    $fechareg = date("Y-m-d");
+    date_default_timezone_set('America/Guatemala');
+    $hora = date("G:i:s");
+    
+    $consulta = "INSERT INTO mnto_servicio(fecha_servicio, nombre_cliente, direccion_cliente, contacto_cliente, telefono_cliente, email_cliente, nombre_equipo, marca_equipo, modelo_equipo, serie_equipo, observaciones_servicio, status_inicial_equipo, status_final_equipo, tecnico, hora_entrada_tecnico, hora_salida_tecnico, calificacion, observacion_cliente, cliente_acepta, date) VALUES ('$fecha_servicio','$nombre_cliente','$direccion_cliente','$contacto_cliente','$telefono_cliente','$email_cliente','$nombre_equipo','$nombre_equipo','$marca_equipo','$modelo_equipo','$serie_equipo','$observaciones_servicio','$status_inicial_equipo','$status_final_equipo','$tecnico','$hora_entrada_tecnico','$hora_salida_tecnico','$calificacion','$observacion_cliente','$cliente_acepta','$fechareg')";
+
+    echo '<script type="text/javascript">alert('$consulta')</script>';
+    
+     $resultado = mysqli_query($conex,$consulta);
+   
+    if ($resultado) {
+        error_log($consulta);
+        echo($consulta);
+
+    } else {
+error_log($consulta);
+        echo($consulta);
+    }
+       
 }
 
 ?>
