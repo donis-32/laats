@@ -32,9 +32,8 @@ if (isset($_POST['register'])) {
     date_default_timezone_set('America/Guatemala');
     $hora = date("G:i:s");
     
-    $consulta = "INSERT INTO mnto_servicio(fecha_servicio, nombre_cliente, direccion_cliente, contacto_cliente, telefono_cliente, email_cliente, nombre_equipo, marca_equipo, modelo_equipo, serie_equipo, observaciones_servicio, status_inicial_equipo, status_final_equipo, tecnico, hora_entrada_tecnico, hora_salida_tecnico, calificacion, observacion_cliente, cliente_acepta, date) VALUES ('$fecha_servicio','$nombre_cliente','$direccion_cliente','$contacto_cliente','$telefono_cliente','$email_cliente','$nombre_equipo','$nombre_equipo','$marca_equipo','$modelo_equipo','$serie_equipo','$observaciones_servicio','$status_inicial_equipo','$status_final_equipo','$tecnico','$hora_entrada_tecnico','$hora_salida_tecnico','$calificacion','$observacion_cliente','$cliente_acepta','$fechareg')";
+    $consulta = "INSERT INTO mnto_servicio(fecha_servicio, nombre_cliente, direccion_cliente, contacto_cliente, telefono_cliente, email_cliente, nombre_equipo, marca_equipo, modelo_equipo, serie_equipo, observaciones_servicio, status_inicial_equipo, status_final_equipo, tecnico, hora_entrada_tecnico, hora_salida_tecnico, calificacion, observacion_cliente, cliente_acepta, date) VALUES ('$fecha_servicio','$nombre_cliente','$direccion_cliente','$contacto_cliente','$telefono_cliente','$email_cliente','$nombre_equipo','$marca_equipo','$modelo_equipo','$serie_equipo','$observaciones_servicio','$status_inicial_equipo','$status_final_equipo','$tecnico','$hora_entrada_tecnico','$hora_salida_tecnico','$calificacion','$observacion_cliente','$cliente_acepta','$fechareg')";
 
-    echo '<script type="text/javascript">alert('$consulta')</script>';
     
      $resultado = mysqli_query($conex,$consulta);
    
