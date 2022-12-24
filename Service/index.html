@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAFFLE NB CX - 72</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="contend">
+            <form method="POST" id="form">
+                <div class="form">
+                    
+                    <img id="imgraffle" src="assets/images/log-png.png">
+                    
+                    <h1>New Balance XC-72 "Bone Multi" </h1>
+                    
+                    <h3 id="tc">Ingresa tus datos* para participar en el derecho de compra de tus zapatillas</h3>
+                    <h5>*todos  los campos son obligatorios.</h5>
+                    
+                    <div class="grupo">
+                    <input type="text" name="nombre" placeholder="NOMBRES" required><span class="barra"></span>
+                    </div>
+                    
+                    <div class="grupo">
+                        <input type="text" name="apellido" placeholder="APELLIDOS" required><span class="barra"></span>
+                    </div>
+                    <div class="grupo">
+                        <input type="text" name="ig" placeholder="IG" required="@"><span class="barra"></span>
+                    </div>
+                    <div class="grupo">
+                        <input type="email" name="email" placeholder="E-MAIL" required><span class="barra"></span>
+                    </div>
+                    <div class="grupo">
+                        <input type="number" name="numtel" placeholder="NUMERO DE TELEFONO" required>
+                        <span class="barra"></span>
+                    </div>
+                    <br>
+                        <div>
+                        <select class="orderby" id="dropdown" name="tallas">
+                            <option disabled selected>Tallas</option>
+                            <option value="7">7</option>
+                            <option value="7m">7.5</option>
+                            <option value="8">8</option>
+                            <option value="8m">8.5</option>
+                            <option value="9">9</option>
+                            <option value="9m">9.5</option>
+                            <option value="10">10</option>
+                            <option value="10m">10.5</option>
+                            <option value="11">11</option>
+                        </select>
+                    </div>
+                    <button type="submit" name="register">enviar</button>
+                </div>
+            </form>
+            </div>
+    <?php 
+      include("registrar.php");
+    ?>
+</body>    
+ </html>
